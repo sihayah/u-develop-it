@@ -27,6 +27,7 @@ router.post('/vote', ({ body }, res) => {
     });
 });
 
+// count votes
 router.get('/vote', (req, res) => {
     const sql = `SELECT candidates.*, parties.name AS party_name, COUNT(candidate_id) AS count
     FROM votes
